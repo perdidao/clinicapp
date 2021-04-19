@@ -1,0 +1,35 @@
+name: ClinicApp
+description: A new Flutter project.
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  flutter_svg: ^0.21.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Apercu
+      fonts:
+        - asset: assets/fonts/apercu-medium.otf
+        - asset: assets/fonts/apercu-light.otf
+          weight: 300
+        - asset: assets/fonts/apercu-bold.otf
+          weight: 700
