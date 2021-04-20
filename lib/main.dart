@@ -1,5 +1,5 @@
-import 'package:ClinicApp/constants.dart';
-import 'package:ClinicApp/screens/dashboard/dashboard_screen.dart';
+import 'package:clinicapp/constants.dart';
+import 'package:clinicapp/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
