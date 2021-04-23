@@ -22,11 +22,11 @@ class ClinicApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'OdontoPro',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: opBlue,
+        scaffoldBackgroundColor: opWashedWhite,
+        primaryColor: opHighlight,
         textTheme: Theme.of(context).textTheme.apply(
               fontFamily: 'Apercu',
-              bodyColor: opBlack,
+              bodyColor: opDarkGray,
             ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
