@@ -1,3 +1,4 @@
+import 'package:clinicapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,6 +14,7 @@ class DashboardScreen extends StatelessWidget {
           color: Colors.white,
           height: 36,
         ),
+        backgroundColor: opCyan,
         elevation: 0,
       ),
       body: DashboardScreenBody(),

@@ -24,7 +24,10 @@ class ClinicApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         primaryColor: opBlue,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: opBlack),
+        textTheme: Theme.of(context).textTheme.apply(
+              fontFamily: 'Apercu',
+              bodyColor: opBlack,
+            ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: DashboardScreen(),
