@@ -1,10 +1,14 @@
 import 'package:clinicapp/constants.dart';
+import 'package:clinicapp/services/appointment/appointment.dart';
 import 'package:flutter/material.dart';
 
 class UpcomingAppointmentsItem extends StatelessWidget {
   const UpcomingAppointmentsItem({
     Key? key,
+    required this.appointment,
   }) : super(key: key);
+
+  final Appointment appointment;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,7 @@ class UpcomingAppointmentsItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '13h30',
+            appointment.date.split(' ')[1],
             style: TextStyle(
               fontSize: 22,
               color: opHighlight,

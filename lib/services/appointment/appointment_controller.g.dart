@@ -24,6 +24,21 @@ mixin _$AppointmentController on _AppointmentController, Store {
     });
   }
 
+  final _$appointmentsAtom = Atom(name: '_AppointmentController.appointments');
+
+  @override
+  ObservableList<Appointment> get appointments {
+    _$appointmentsAtom.reportRead();
+    return super.appointments;
+  }
+
+  @override
+  set appointments(ObservableList<Appointment> value) {
+    _$appointmentsAtom.reportWrite(value, super.appointments, () {
+      super.appointments = value;
+    });
+  }
+
   final _$_AppointmentControllerActionController =
       ActionController(name: '_AppointmentController');
 
@@ -41,7 +56,8 @@ mixin _$AppointmentController on _AppointmentController, Store {
   @override
   String toString() {
     return '''
-isLoading: ${isLoading}
+isLoading: ${isLoading},
+appointments: ${appointments}
     ''';
   }
 }

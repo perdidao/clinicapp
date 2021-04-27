@@ -3,11 +3,11 @@ import 'package:clinicapp/services/procedure/procedure.dart';
 class Appointment {
   late int id;
 
-  late DateTime date;
+  late String date;
 
   late int patientId;
 
-  late double price;
+  late dynamic price;
 
   List<Procedure>? procedures;
 
