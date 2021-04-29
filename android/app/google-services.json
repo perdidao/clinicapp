@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46455593418",
+    "project_id": "odontopro-d07b1",
+    "storage_bucket": "odontopro-d07b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46455593418:android:d51708f7ca9e93d8b8d733",
+        "android_client_info": {
+          "package_name": "br.com.alamo.odontopro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46455593418-kr26rifl4eikuo4p5m15s1q5enao1s69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQuL88doblwb75tnJ1KNcHz9R-TmWUmeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46455593418-kr26rifl4eikuo4p5m15s1q5enao1s69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
