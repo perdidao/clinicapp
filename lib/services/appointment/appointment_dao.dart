@@ -16,6 +16,9 @@ abstract class AppointmentDao {
   @Query('SELECT * FROM Appointments WHERE patientId = :id')
   Future<Appointment?> findAppointmentByPatientId(int id);
 
+  @Query('SELECT * FROM Appointments WHERE clinicId = :id')
+  Future<Appointment?> findAppointmentByClinicId(int id);
+
   @Query('DELETE FROM Appointments WHERE id = :id')
   Future<void> deleteAppointment(int id);
 }

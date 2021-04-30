@@ -1,16 +1,13 @@
 import 'package:clinicapp/constants.dart';
-import 'package:clinicapp/services/auth/auth_controller.dart';
 import 'package:clinicapp/styles/input_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var viewport = MediaQuery.of(context).size;
-    AuthController authController = Modular.get();
 
     return Scaffold(
       body: Container(
@@ -106,9 +103,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: InkWell(
-                        onTap: () async {
-                          await authController.loginAction(context);
-                        },
+                        onTap: () {},
                         child: Container(
                           padding: EdgeInsets.symmetric(
                             vertical: opSpacing / 2,
@@ -123,20 +118,14 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           child: Center(
-                            child: authController.isLoading
-                                ? Container(
-                                    height: 22,
-                                    width: 22,
-                                    child: CircularProgressIndicator(),
-                                  )
-                                : Text(
-                                    'ENTRAR',
-                                    style: TextStyle(
-                                      color: opWashedWhite,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                            child: Text(
+                              'ENTRAR',
+                              style: TextStyle(
+                                color: opWashedWhite,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                       ),

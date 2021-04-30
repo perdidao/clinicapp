@@ -9,6 +9,8 @@ class Appointment {
 
   final int patientId;
 
+  final int? clinicId;
+
   final double? price;
 
   final String? type;
@@ -19,6 +21,7 @@ class Appointment {
     required this.id,
     required this.date,
     required this.patientId,
+    this.clinicId,
     this.price,
     this.type,
     this.notes,

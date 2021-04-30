@@ -23,7 +23,7 @@ class ClinicApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/auth/login',
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       title: 'OdontoPro',
       theme: ThemeData(
