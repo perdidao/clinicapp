@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:clinicapp/constants.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'components/greeting.dart';
 import 'components/upcoming_appointments.dart';
 
@@ -11,27 +12,20 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           children: [
             Greeting(),
+            UpcomingAppointments(),
             Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: opSpacing,
-                vertical: opSpacing / 2,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Próximas consultas',
+              padding: EdgeInsets.all(opSpacing),
+              child: ElevatedButton(
+                onPressed: () => Modular.to.navigate('/patients'),
+                child: Container(
+                  width: double.infinity,
+                  child: Text(
+                    'Meus pacientes',
+                    textAlign: TextAlign.center,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Nova consulta',
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
-            UpcomingAppointments(),
           ],
         ),
       ),

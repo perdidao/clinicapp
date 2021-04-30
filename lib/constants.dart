@@ -15,4 +15,8 @@ const opHighlightDarken = Color(0xFF1054E8);
 
 const opWashedWhite = Color(0xFFFEFEFE);
 
+const opRed = Color(0xFFFF6666);
+const opGreen = Color(0xFF00CC66);
+const opBlue = Color(0xFF0066CC);
+
 const double opSpacing = 20;

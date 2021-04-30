@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'package:clinicapp/services/clinic/clinic_dao.dart';
-import 'package:clinicapp/services/patient/patient_dao.dart';
 import 'package:floor/floor.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
@@ -11,8 +9,10 @@ import 'package:clinicapp/services/appointment_type/appointment_type.dart';
 import 'package:clinicapp/services/appointment_type/appointment_type_dao.dart';
 
 import 'package:clinicapp/services/clinic/clinic.dart';
+import 'package:clinicapp/services/clinic/clinic_dao.dart';
 
 import 'package:clinicapp/services/patient/patient.dart';
+import 'package:clinicapp/services/patient/patient_dao.dart';
 
 part 'database.g.dart';
 
