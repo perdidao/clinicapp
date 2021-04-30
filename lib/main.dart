@@ -4,8 +4,13 @@ import 'package:clinicapp/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'app_module.dart';
+import 'dao_factory.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await DaoFactory.init();
+
   runApp(
     ModularApp(
       module: AppModule(),

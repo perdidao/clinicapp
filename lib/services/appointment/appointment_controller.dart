@@ -1,5 +1,6 @@
+import 'package:clinicapp/dao_factory.dart';
 import 'package:clinicapp/services/appointment/appointment.dart';
-import 'package:clinicapp/services/appointment/appointment_service.dart';
+import 'package:clinicapp/services/appointment/appointment_dao.dart';
 import 'package:mobx/mobx.dart';
 
 part 'appointment_controller.g.dart';
@@ -8,7 +9,7 @@ class AppointmentController = _AppointmentController
     with _$AppointmentController;
 
 abstract class _AppointmentController with Store {
-  final _appointmentService = AppointmentService();
+  final AppointmentDao _appointmentDao = DaoFactory.instance!.appointmentDao;
 
   @observable
   bool isLoading = true;
@@ -21,17 +22,12 @@ abstract class _AppointmentController with Store {
   }
 
   Future<void> loadAppointments() async {
-    this.setLoadingStatus(true);
-    this.appointments.clear();
-    this.appointments.addAll(
-          await _appointmentService.fetchAppointments().then((value) {
-            this.setLoadingStatus(false);
-            return value;
-          }).catchError((err) {
-            this.setLoadingStatus(false);
-            print('!! > Error fetching appointments');
-          }),
-        );
+    setLoadingStatus(true);
+
+    this._appointmentDao.listAllAppointments().then((appointments) {
+      this.appointments.clear();
+      this.appointments.addAll(appointments);
+    }).whenComplete(() => setLoadingStatus(false));
   }
 
   @action

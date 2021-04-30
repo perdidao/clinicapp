@@ -18,8 +18,11 @@ class UpcomingAppointments extends StatelessWidget {
     return Observer(
         name: 'UpcomingAppointmentsObserver',
         builder: (context) {
-          if (appointmentController.appointments.length == 0)
+          if (appointmentController.isLoading)
             return CircularProgressIndicator();
+
+          if (appointmentController.appointments.length == 0)
+            return Text('Nenhuma consulta agendada');
 
           return Container(
             child: SingleChildScrollView(

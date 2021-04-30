@@ -1,13 +1,17 @@
+import 'package:floor/floor.dart';
+
+@Entity(tableName: 'Patients')
 class Patient {
-  late int id;
+  @primaryKey
+  final int id;
 
-  late String name;
+  final String name;
 
-  String? email;
+  final String? email;
 
-  String? phone;
+  final String? phone;
 
-  String? notes;
+  final String? notes;
 
   Patient({
     required this.id,
@@ -16,23 +20,4 @@ class Patient {
     this.phone,
     this.notes,
   });
-
-  Patient.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.name = json['name'];
-    this.email = json['email'];
-    this.phone = json['phone'];
-    this.notes = json['notes'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['email'] = this.email;
-    data['phone'] = this.phone;
-    data['notes'] = this.notes;
-
-    return data;
-  }
 }

@@ -1,11 +1,15 @@
+import 'package:floor/floor.dart';
+
+@Entity(tableName: 'Clinics')
 class Clinic {
-  late int id;
+  @primaryKey
+  final int id;
 
-  late String name;
+  final String name;
 
-  double? appointmentValue;
+  final double? appointmentValue;
 
-  double? dentistPercentage;
+  final double? dentistPercentage;
 
   Clinic({
     required this.id,
@@ -13,22 +17,4 @@ class Clinic {
     this.appointmentValue,
     this.dentistPercentage,
   });
-
-  Clinic.fromJson(Map<String, dynamic> json) {
-    this.id = json['id'];
-    this.name = json['name'];
-    this.appointmentValue = json['appointmentValue'];
-    this.dentistPercentage = json['dentistPercentage'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['appointmentValue'] = this.appointmentValue;
-    data['dentistPercentage'] = this.dentistPercentage;
-
-    return data;
-  }
 }
